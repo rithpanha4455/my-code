@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha384-HOaK8JsbwHzKbZczl3fX9mOvT1TmA2P2M0ab1Tldm3ap5JWyjvNbbtD8MBwZTzcE" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.2.0/css/bootstrap.min.css" integrity="sha384-gH8yIEw5jZc/j+NR3bcrNvhMdyReE89GAnI+86NUZ5MsmkZl57E+c0pGqI9l9m/n" crossorigin="anonymous">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .navbar {
+            color: #fff;
+            padding: 15px 20px;
+            font-size: 25px;
+            background: #4070f4;
+            cursor: pointer;
+        }
+
+        .sidebar-header {
+            background-color: #19274E;
+            height: 72px;
+            display: flex;
+            align-items: center;
+            padding-left: 50px;
+        }
+
+        .sidebar {
+            background-color: #333;
+            color: #fff;
+            height: 100vh;
+            transition: transform 0.3s ease;
+        }
+
+        .sidebar.close {
+            transform: translateX(-100%);
+        }
+
+        .menu-content {
+            padding: 20px;
+        }
+
+        .submenu {
+            display: none;
+        }
+
+        .show-submenu .submenu {
+            display: block;
+        }
+
+        .main {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid p-0">
+        <div class="row m-0">
+            <!-- Sidebar Section -->
+            <div class="col-lg-2 p-0">
+                <div class="sidebar close">
+                    <header class="sidebar-header">
+                        <img src="/img/Group (1).png" alt="Logo">
+                    </header>
+                    <div class="menu-content">
+                        <ul class="menu-items">
+                            <div class="menu-title">Your menu title</div>
+                            <li class="item">
+                                <a href="#">Your first link</a>
+                            </li>
+                            <li class="item">
+                                <div class="submenu-item">
+                                    <span>First submenu</span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                                <ul class="menu-items submenu">
+                                    <div class="menu-title">
+                                        <i class="fa-solid fa-chevron-left"></i>
+                                        Your submenu title
+                                    </div>
+                                    <li class="item">
+                                        <a href="#">First sublink</a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="#">First sublink</a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="#">First sublink</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="item">
+                                <div class="submenu-item">
+                                    <span>Second submenu</span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                                <ul class="menu-items submenu">
+                                    <div class="menu-title">
+                                        <i class="fa-solid fa-chevron-left"></i>
+                                        Your submenu title
+                                    </div>
+                                </ul>
+                            </li>
+                            <li class="item">
+                                <a href="#">Your second link</a>
+                            </li>
+                            <li class="item">
+                                <a href="#">Your third link</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Main Content Section -->
+            <div class="col-lg-10 p-0">
+                <nav class="navbar">
+                    <i class="fa-solid fa-bars" id="sidebar-toggle"></i>
+                </nav>
+                <div class="main">
+                    <h1>Hello</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.2.0/js/bootstrap.bundle.min.js" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"></script>
+    <script>
+        const sidebar = document.querySelector(".sidebar");
+const sidebarToggle = document.querySelector("#sidebar-toggle");
+const menuItems = document.querySelectorAll(".submenu-item");
+const subMenuTitles = document.querySelectorAll(".submenu .menu-title");
+
+sidebarToggle.addEventListener("click", () => {
+    sidebar.classList.toggle("close");
+});
+
+menuItems.forEach((item, index) => {
+    item.addEventListener("click", () => {
+        item.classList.toggle("show-submenu");
+    });
+});
+
+subMenuTitles.forEach((title) => {
+    title.addEventListener("click", () => {
+        title.parentElement.classList.remove("show-submenu");
+    });
+});
+
+    </script>
+</body>
+</html>

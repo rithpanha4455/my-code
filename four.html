@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Select in Bootstrap Card</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Khmer&display=swap" rel="stylesheet">
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"> -->
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .custom-select-wrapper {
+            position: relative;
+            margin: 10px 0;
+            width: 100%;
+        }
+
+        .custom-select {
+            border: 1px solid #000000;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+        }
+
+        .custom-options {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: white;
+            z-index: 1000;
+            width: 50%;
+            margin-left: 90px;
+        }
+
+        .custom-options.open {
+            display: block;
+        }
+
+        .custom-option {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .custom-option:hover {
+            background-color: #f0f0f0;
+        }
+
+        .custom-select .icon {
+            transition: transform 0.3s ease;
+        }
+
+        .custom-select.open .icon {
+            transform: rotate(180deg);
+        }
+
+        .card-custom {
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            
+            margin-bottom: 20px;
+            border: 2px solid #B2B2B2;
+            height: 646px;
+        }
+            .card-new{
+                padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            
+            margin-bottom: 20px;
+            border: 2px solid #B2B2B2;
+              height: 139px;
+                     
+            }
+            .dashed-line {
+            width: 600px; /* Width of the dashed line */
+            border-bottom: 1px dashed #ccc; /* Dashed line style */
+            margin: 10px 0; /* Space above and below the line */
+        }
+               .customer-card-1{
+                
+                padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            
+            margin-bottom: 20px;
+            border: 2px solid #B2B2B2;
+              height: 344px;
+    
+
+               }
+
+
+               .the-border {
+            width: 603px; /* Fixed width for the dashed border */
+          height: 182px; /* Fixed height for the element */
+           border: 1px dashed #909090; /* Dashed border style with width and color */
+           border-radius: 10px;
+             display: flex; /* Enable Flexbox */
+            align-items: center; /* Center content vertically */
+            justify-content: center;
+            flex-direction: column;
+           }
+
+           .the-border img {
+            max-width: 100px; /* Adjust as needed */
+            margin-bottom: 5px; /* Space between image and text */
+        }
+
+        .the-border p {
+            margin-bottom: 5px; /* Space between text and button */
+            font-size: 16px;
+            text-align: center;
+        }
+         .btn-brown {
+            background-color:  #19274E;
+            ; /* Brown color */
+            color: #fff; /* White text color */
+            border: none; /* Remove default border */
+            border-radius: 8px; /* Rounded corners */
+            padding: 10px 20px; /* Padding inside the button */
+            text-decoration: none; /* Remove underline */
+            font-size: 10px;
+            margin-top: 30px;
+              width: 109px;
+              height: 38px;
+            
+              display: inline-block;
+            
+        }
+
+        .btn-brown:hover {
+            background-color: #5b3a1a; /* Darker brown on hover */
+        }
+           .file-pdf{
+               width:603px;
+               height: 62px;
+               background-color:  #FAFAFA;
+               ;
+               border-radius: 10px;
+               margin-top: 10px;
+               border: 1px solid #D1D1D1;
+               box-shadow: 0px 4px 8px rgba(209, 209, 209, 0.6); /
+           }
+             .new-p{
+                   font-size: 15px;
+                   font-weight: 500;
+             }
+
+             .file-pdf {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #d1d1d1; /* Optional: Add border if needed */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+    background-color: #ffffff; /* Optional: Background color */
+    justify-content: space-between;
+   }
+
+.the-1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.new-p {
+    margin-bottom: 0; /* Remove margin from paragraphs */
+}
+
+     .people-groupe-file{
+
+        padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            
+            margin-bottom: 20px;
+            border: 2px solid #B2B2B2;
+              height: 138px;
+              margin-top: 10px;
+    
+
+     }
+       .signature{
+        padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            
+            margin-bottom: 20px;
+            border: 2px solid #B2B2B2;
+              height: 281px;
+              margin-top: 10px;
+        
+       }
+          #thep{
+            color: black;
+            font-family:"Kantumruy Pro", sans-serif ;
+            font-weight: 500;
+            font-size: 16px;
+               
+          }
+          #ps{
+
+            color: black;
+            font-family:"Kantumruy Pro", sans-serif ;
+            font-weight: 400;
+            font-size: 16px;
+
+          }
+
+            #p-1{
+                color: #2968A3;
+
+            font-family:"Kantumruy Pro", sans-serif ;
+            font-weight: 500;
+            font-size: 22px;
+
+            }
+               .ms-2{
+
+                color: #ffffff;
+
+                 font-family:"Kantumruy Pro", sans-serif ;
+          font-weight: 400;
+            font-size: 10px;
+
+               }
+               #ps-1{
+
+                color: black;
+            font-family:"Kantumruy Pro", sans-serif ;
+            font-weight: 500;
+            font-size: 16px;
+
+
+               }
+
+           
+    </style>
+</head>
+<body style="background-color: whitesmoke;">
+
+<div class="container mt-4">
+    <div class="row ">
+        <div class="col-md-6">
+            <div class="card-custom">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="custom-select-wrapper">
+                            <p id="thep">ក្រសួង/មន្ទីរ</p>
+
+
+                            <div class="custom-select" data-select="1">
+                                <span id="ps">ជ្រើសរើស ក្រសួង/មន្ទីរ</span>
+                                <i class="fa fa-caret-down icon" style="color: #575757"></i>
+                            </div>
+                            <div class="custom-options">
+                                <div class="custom-option" data-value="1">Option 1</div>
+                                <div class="custom-option" data-value="2">Option 2</div>
+                                <div class="custom-option" data-value="3">Option 3</div>
+                            </div>
+                        </div>
+                                <p id="thep">អគ្គនាយកដ្ឋាន</p>
+                        <div class="custom-select-wrapper">
+                            <div class="custom-select" data-select="2">
+                                <span id="ps">ជ្រើសរើស ក្រសួង/មន្ទីរ</span>
+                                <i class="fa fa-caret-down icon" style="color: #575757"></i>
+                            </div>
+                            <div class="custom-options">
+                                <div class="custom-option" data-value="1">Option 1</div>
+                                <div class="custom-option" data-value="2">Option 2</div>
+                                <div class="custom-option" data-value="3">Option 3</div>
+                            </div>
+                        </div>
+
+                             <P id="thep">នាយកដ្ឋាន</P>
+                        <div class="custom-select-wrapper">
+                            <div class="custom-select" data-select="3">
+                                <span id="ps">ជ្រើសរើស ក្រសួង/មន្ទីរ</span>
+                                <i class="fa fa-caret-down icon" style="color: #575757"></i>
+                            </div>
+
+                             
+                            <div class="custom-options">
+                                <div class="custom-option" data-value="1">Option 1</div>
+                                <div class="custom-option" data-value="2">Option 2</div>
+                                <div class="custom-option" data-value="3">Option 3</div>
+                            </div>
+                        </div>
+                        
+                        <P id="thep">ការិយាល័យ</P>
+
+                        
+                        <div class="custom-select-wrapper">
+                            <div class="custom-select" data-select="4">
+                                <span id="ps">ជ្រើសរើស ក្រសួង/មន្ទីរ</span>
+                                <i class="fa fa-caret-down icon" style="color: #575757"></i>
+                            </div>
+                            <div class="custom-options">
+                                <div class="custom-option" data-value="1">Option 1</div>
+                                <div class="custom-option" data-value="2">Option 2</div>
+                                <div class="custom-option" data-value="3">Option 3</div>
+                            </div>
+                        </div>
+
+                            <P id="thep">លេខឯកសារដើម</P>
+                        <div class="custom-select-wrapper">
+                            <div class="custom-select" data-select="5">
+                                <span id="ps">ជ្រើសរើស ក្រសួង/មន្ទីរ</span>
+                                <i class="fa fa-caret-down icon" style="color: #575757"></i>
+                            </div>
+                            <div class="custom-options">
+                                <div class="custom-option" data-value="1">Option 1</div>
+                                <div class="custom-option" data-value="2">Option 2</div>
+                                <div class="custom-option" data-value="3">Option 3</div>
+                            </div>
+                        </div>
+                             <p id="thep">ផ្សេងៗ</p>
+
+                             <div class="custom-select-wrapper">
+                                <div class="custom-select" data-select="5">
+                                    <span id="ps">ជ្រើសរើស ក្រសួង/មន្ទីរ</span>
+                                    <i class="fa fa-caret-down icon" style="color: #575757"></i>
+                                </div>
+                                <div class="custom-options">
+                                    <div class="custom-option" data-value="1">Option 1</div>
+                                    <div class="custom-option" data-value="2">Option 2</div>
+                                    <div class="custom-option" data-value="3">Option 3</div>
+                                </div>
+                            </div>
+
+
+                   
+                    </div>
+
+
+                    
+                </div>
+            </div>
+                  <div class="card-new">
+                    <a class="nav-link d-flex align-items-center" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                    aria-controls="collapseDocuments" style="padding-left: 10px; font-size: 24px; color: black;" id="main-i-1">
+                     <img src="/img/jam_write-f.png" alt="Document Icon" style="max-height: 24px; margin-right: 10px;">
+                     <p style="margin: 0; " id="p-1">កម្មវត្ថុ</p>
+                 </a>
+                    <div class="dashed-line"></div> 
+                        
+                           
+
+                  </div>
+        </div>
+
+                <div class="col-md-6">
+                          <div class="customer-card-1">
+                            <P id="p-1">បញ្ជូលឯកសារ</P>
+
+                                <div class="the-border">
+                                    <div class="the-border">
+                                          <img src="/img/Group 39444 (1).png">
+                                            <p>Drag & Drop file here</p>
+                                        <a href="file:///C:/path-to-your-file.ext" class="btn btn-brown">Open Local File</a>
+
+                                       
+                    
+
+                                </div>
+                               
+
+                          </div>
+                          <div class="file-pdf">
+                            <div class="d-flex align-items-center justify-content-start">
+                                <img src="/img/Group 39433.png" alt="PDF Icon">
+                                <div class="the-1 ms-3">
+                                    <p class="new-p mb-1">frame12378.pdf</p>
+                                    <p class="new-p">32.MB</p>
+                                </div>
+                                <img src="/img/icon-park-twotone_check-one.png" style="width: 14px; height: 14px; margin-top: 25px;">
+                            </div>
+                        
+                            <div class="d-flex justify-content-end" id="new">
+                                <img src="/img/Mask group.png" alt="New Icon">
+                            </div>
+                        </div>
+                      
+                            </div> 
+
+                         
+
+                                    <div class="people-groupe-file">
+                                        <i class="fa-solid fa-users" style="color: #2968A3;width: 30px;height: 25;"></i><span id="p-1">ក្រុមមើលឯកសារ</span>
+
+                                        <div class="custom-select-wrapper">
+                                            <div class="custom-select" data-select="2">
+                                                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" 
+                                                style="width: 24px;height: 24px;color: black;" >
+
+                                                <span id="ps" style="padding-right: 20px;">ជ្រើសរើសទាំងអស់ 
+
+                                                </span><span id="ps" style="padding-right: 250px;">ជ្រើសរើស ក្រុម</span>
+                                                <i class="fa fa-caret-down icon" style="color: #575757"></i>
+                                            </div>
+                                            <div class="custom-options">
+                                                <div class="custom-option" data-value="1">Option 1</div>
+                                                <div class="custom-option" data-value="2">Option 2</div>
+                                                <div class="custom-option" data-value="3">Option 3</div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                       <div class="signature">
+                                          <div>
+                                            <i class="fa-solid fa-user" style="color: #2968A3;"></i><span id="p-1" style="padding-left: 15px;">អ្នកចុះហត្ថលេខា</span>
+                                          </div>
+                                          <button class="btn btn-brown d-flex align-items-center" style="width: 185px; height: 36px; border-radius: 4px;">
+                                            <i class="bi bi-person"></i>
+                                            <span class="ms-2">បង្កើតអ្នកចុះហត្ថលេខាថ្មី</span>
+                                        </button>
+                                               <div class="row">
+                                                    <div class="col-md-6">
+
+                                                           <p style="padding-top: 10px;" id="ps-1">អ្នកចុះហត្ថលេខា</p>
+                                                        <div class="custom-select-wrapper" style="width: 316px;height: 52px;">
+                                                            <div class="custom-select" data-select="2">
+                                                                <span id="ps">ជ្រើសរើស អ្នកចុះហត្ថលេខា</span>
+                                                                <i class="fa fa-caret-down icon" style="color: #575757"></i>
+
+                                                            </div>
+                                                            <div class="custom-options">
+                                                                <div class="custom-option" data-value="1">Option 1</div>
+                                                                <div class="custom-option" data-value="2">Option 2</div>
+                                                                <div class="custom-option" data-value="3">Option 3</div>
+                                                            </div>
+                                                        </div>
+                                                        
+
+                                 
+
+                                    </div>
+
+                                                            <div class="col-md-6">
+
+                                                                <p style="padding-top: 10px;" id="ps-1">កាលបរិច្ឆេទ</p>
+
+                                                                <input type="date" style="width: 260px;
+                                                                 border: 1px solid black;border-radius: 5px;height: 
+                                                                 44px;margin-top: 2px;margin-left: 20px ; ">
+                                           
+
+                                                            </div>
+
+                                                    </div>
+                                                    <div class="d-flex align-items-center justify-content-end">
+                                                           <div class="btn-brown" style="margin-top: 5px;width: 175px;">
+                                                            <i class="bi bi-person"></i>
+                                                            <span class="ms-2">អ្នកចុះហត្ថលេខា</span>
+                                                           </div>
+                                                          
+                                                      
+                                                    </div>
+                                               </div>
+
+                                             
+                                        
+
+                                           </div>
+                                            
+
+                                          
+                                               
+                                                
+
+                                       </div>
+                            
+                            
+                            
+
+                          </div>
+                </div>
+    </div>
+
+       
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const customSelects = document.querySelectorAll('.custom-select');
+        const customOptionsLists = document.querySelectorAll('.custom-options');
+
+        customSelects.forEach(select => {
+            select.addEventListener('click', () => {
+                closeAllCustomOptions();
+                const options = select.nextElementSibling;
+                options.classList.toggle('open');
+                select.classList.toggle('open'); // Toggle icon rotation
+            });
+        });
+
+        document.querySelectorAll('.custom-option').forEach(option => {
+            option.addEventListener('click', (e) => {
+                const selectWrapper = e.target.closest('.custom-select-wrapper');
+                const selectText = selectWrapper.querySelector('.custom-select span');
+                selectText.textContent = e.target.textContent;
+                closeAllCustomOptions();
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.custom-select-wrapper')) {
+                closeAllCustomOptions();
+            }
+        });
+
+        function closeAllCustomOptions() {
+            customOptionsLists.forEach(options => {
+                options.classList.remove('open');
+            });
+            customSelects.forEach(select => {
+                select.classList.remove('open'); // Reset icon rotation
+            });
+        }
+    });
+</script>
+
+</body>
+</html>

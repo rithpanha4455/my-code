@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Khmer&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+    <style>
+        .table th, .table td {
+            vertical-align: middle;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            padding: 0.5rem; /* Add padding to table cells */
+        }
+
+        .table th span, .table td span {
+            display: inline-block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            max-width: 100%;
+            font-family: "Kantumruy Pro", sans-serif;
+            font-weight: 500;
+            font-size: 18px;
+            color: #1E1E1E;
+        }
+
+        .img-fluid {
+            max-width: 20px; /* Adjust the max-width as needed */
+            height: auto;
+            margin-left: 5px; /* Add margin for spacing */
+        }
+
+        /* Styles for the header rows */
+        .table-primary th, .table-primary td {
+            background-color:  var(--Color-contrast, #C9D8F8);
+            /* Light grey background for header */
+        }
+
+        .table-white th, .table-white td {
+            background-color: #ffffff; /* White background for data rows */
+        }
+          
+        .table-new th, .table-new td {
+            background-color:  #F3F6F9;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        #date, #lr, #doc-type {
+            padding-left: 40px;
+        }
+
+        #date {
+            padding-right: 40px;
+        }
+
+        #doc-type {
+            padding-left: 150px;
+        }
+
+        #action {
+            padding-left: 100px;
+        }
+          .img-fluid-1{
+            margin-left: 35px; 
+            
+
+          }
+
+          .line-img {
+    height: 50px; /* Specify the desired height */
+    width: auto; /* Let the width adjust automatically */
+    display: block; /* Ensure the image displays as a block-level element */
+    margin: 0 auto; /* Center the image if needed */
+}
+   .border{
+       height: 30px;
+       background-color: #C9D8F8;
+       width: 0;
+       margin-left:  100px;
+   }
+
+    </style>
+</head>
+<body style="background-color: whitesmoke">
+
+    <!-- First Table -->
+    <table class="table table-borderless table-primary d-flex justify-content-center ">
+        <thead>
+          <tr class="new">
+            <th class="text-center" style="width: 100px;">
+              <i class="bi bi-arrow-down-up"></i>
+              <span id="lr">ល.រ</span>
+              <img src="/img/Line 82 (1).png" class="img-fluid" alt="Line">
+            </th>
+            <th id="th-1" class="text-center" style="width: 200px;">
+              <img src="/img/solar_sort-vertical-line-duotone.png" class="img-fluid" alt="Sort Icon">
+              <span id="date">កាលបរិច្ឆេទចូល</span>
+              <img src="/img/Line 82 (1).png" class="img-fluid" alt="Line">
+            </th>
+            <th id="th-2" class="text-center" style="width: 600px;">
+              <span id="subject">កម្មវត្ថុ</span>
+            </th>
+            <th id="th-4" class="text-center" style="width: 200px;">
+              <img src="/img/Line 82 (1).png" class="img-fluid" alt="Line">
+              <img src="/img/solar_sort-vertical-line-duotone.png" class="img-fluid" alt="Sort Icon">
+              <span id="number">លេខចេញ/ចូល</span>
+            </th>
+            <th id="th-3" class="text-center" style="width: 200px;">
+              <img src="/img/Line 82 (1).png" class="img-fluid" alt="Line">
+              <span id="doc-type">ប្រភេទឯកសារ</span>
+            </th>
+            <th id="th-4" class="text-center" style="width: 200px;">
+              <img src="/img/Line 82 (1).png" class="img-fluid" alt="Line">
+              <span id="action">សកម្មភាព</span>
+            </th>
+          </tr>
+        </thead>
+    </table>
+
+    <!-- Second Table
+    <table class="table table-borderless table-white">
+        <thead>
+          <tr class="new">
+            <th class="text-center" style="width: 100px;">
+              <span id="lr">1</span>
+              <img src="/img/Line 82 (1).png" class="img-fluid" alt="Line">
+            </th>
+            <th id="th-1" class="text-center" style="width: 200px;">
+              <span id="date-1">កាលបរិច្ឆេទចូល</span>
+              
+            </th>
+            <th id="th-2" class="text-center" style="width: 600px;">
+                <img src="/img/Line 82 (1).png" class="img-fluid-1" alt="Line" style="padding-right: 135px;">
+              <span id="subject">កម្ពស់ សីលធម៌ តម្លៃ សេចក្តីថ្លៃថ្នូរ ជំនឿទុកចិត្ត ឧត្តមភាព កិត្តិយសនិងប្រសិទ្ធភាព...</span>
+            </th>
+            <th id="th-4" class="text-center" style="width: 200px;">
+              <img src="/img/Line 82 (1).png" class="img-fluid" alt="Line">
+              <span id="number">១២៣៤ ​(ចូល)</span>
+            </th>
+            <th id="th-3" class="text-center" style="width: 200px;" style="margin-left: 100px;">
+              <img src="/img/Line 82 (1).png" class="img-fluid-1" alt="Line" style="margin-left: 50px;">
+              <span id="doc-type">របាយការណ៍ចំណាយថវិការប្រចាំថ្ងៃ</span>
+            </th>
+            <th id="th-4" class="text-center" style="width: 200px;">
+              <img src="/img/Line 82 (1).png" class="img-fluid" alt="Line">
+              <span id="action">សកម្មភាព</span>
+            </th>
+          </tr>
+        </thead>
+    </table> -->
+
+    <!-- <table class="table table-borderless table-new">
+        <thead>
+          <tr class="new">
+            <th class="text-center" style="width: 100px;">
+              <span id="lr">1</span>
+              <img src="/img/Line 82 (1).png" class="img-fluid" alt="Line">
+            </th>
+            <th id="th-1" class="text-center" style="width: 200px;">
+              <span id="date-1">កាលបរិច្ឆេទចូល</span>
+              
+            </th>
+            <th id="th-2" class="text-center" style="width: 600px;">
+                <img src="/img/Line 82 (1).png" class="img-fluid-1" alt="Line" style="padding-right: 135px;">
+              <span id="subject">កម្ពស់ សីលធម៌ តម្លៃ សេចក្តីថ្លៃថ្នូរ ជំនឿទុកចិត្ត ឧត្តមភាព កិត្តិយសនិងប្រសិទ្ធភាព...</span>
+            </th>
+            <th id="th-4" class="text-center" style="width: 200px;">
+              <img src="/img/Line 82 (1).png" class="img-fluid" alt="Line">
+              <span id="number">លេខចេញ/ចូល</span>
+            </th>
+            <th id="th-3" class="text-center" style="width: 200px;">
+              <img src="/img/Line 82 (1).png" class="img-fluid" alt="Line">
+              <span id="doc-type">ប្រភេទឯកសារ</span>
+            </th>
+            <th id="th-4" class="text-center" style="width: 200px;">
+              <img src="/img/Line 82 (1).png" class="img-fluid" alt="Line">
+              <span id="action">សកម្មភាព</span>
+            </th>
+          </tr>
+        </thead>
+    </table> -->
+
+    <img src="/img/Line 83.png" class="line-img" alt="Line">
+    <!-- modiy -->
+    <table class="table table-borderless">
+      <thead class="table-primary">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      </table>
+
+
+      <table class="table table-borderless table-bordered">
+        <thead class="table-white">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">
+                 <div class="border">
+
+                 </div>
+              <img src="/img/Line 82 (1).png" class="img-fluid" alt="Line">
+              Handle
+            
+            </th>
+          
+          </tr>
+        </thead>
+        </table>
+      
+        
+  
+
+
+</body>
+</html>

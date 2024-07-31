@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: whitesmoke;
+            font-family: "Kantumruy Pro", sans-serif;
+        }
+        .table {
+            border-collapse: collapse;
+            width: 100%;
+            background-color: #ffffff;
+        }
+        .table th, .table td {
+            text-align: left;
+            padding: 8px;
+            vertical-align: middle;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        .table th span, .table td span, .table td .p {
+            display: inline-block;
+            max-width: 100%;
+            font-weight: 500;
+            font-size: 18px;
+            color: #1E1E1E;
+        }
+        .img-fluid {
+            max-width: 20px;
+            height: auto;
+            margin-left: 5px;
+        }
+        .table-primary th, .table-primary td {
+            background-color: var(--Color-contrast, #C9D8F8);
+        }
+        .table-white th, .table-white td {
+            background-color: #ffffff;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .icon-cell {
+            display: flex;
+            align-items: center;
+        }
+        .icon-cell i, .icon-cell img {
+            margin-right: 5px;
+        }
+        .action-cell {
+            text-align: center;
+        }
+        .action-cell .btn {
+            width: 92px;
+            height: 32px;
+        }
+        .table td .p {
+            text-align: center;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2"></div>
+    </div>
+</div>
+
+<table class="table table-primary">
+    <tr>
+        <th class="icon-cell" style="width: 100px;">
+            <i class="bi bi-arrow-down-up"></i>
+            <span>ល.រ</span>
+            <img src="/img/Line 82 (1).png" class="img-fluid" alt="Line">
+        </th>
+        <th class="icon-cell" style="width: 200px;">
+            <img src="/img/solar_sort-vertical-line-duotone.png" class="img-fluid" alt="Sort Icon">
+            <span>កាលបរិច្ឆេទចូល</span>
+            <img src="/img/Line 82 (1).png" class="img-fluid" alt="Line">
+        </th>
+        <th class="text-center" style="width: 600px;">
+            <span>កម្មវត្ថុ</span>
+        </th>
+        <th class="icon-cell" style="width: 200px;">
+            <img src="/img/Line 82 (1).png" class="img-fluid" alt="Line">
+            <img src="/img/solar_sort-vertical-line-duotone.png" class="img-fluid" alt="Sort Icon">
+            <span>លេខចេញ/ចូល</span>
+        </th>
+        <th class="text-center" style="width: 200px;">
+            <img src="/img/Line 82 (1).png" class="img-fluid" alt="Line">
+            <span>ប្រភេទឯកសារ</span>
+        </th>
+        <th class="action-cell" style="width: 200px;">
+            <img src="/img/Line 82 (1).png" class="img-fluid" alt="Line">
+            <span>សកម្មភាព</span>
+        </th>
+    </tr>
+</table>
+
+<table class="table table-white mt-2">
+    <tr>
+        <td class="icon-cell" style="width: 100px;">
+            <span>1</span>
+            <img src="/img/Line 82 (1).png" class="img-fluid" alt="Line">
+        </td>
+        <td class="icon-cell" style="width: 200px;">
+            <span>១៧-មេសា-២០២៤</span>
+            <img src="/img/Line 82 (1).png" class="img-fluid" alt="Line">
+        </td>
+        <td class="the-p" style="width: 600px; text-align: center;">
+            <div class="p">
+                កម្មវត្ថុ
+            </div>
+            <img src="/img/Line 83.png" id="img-1">
+        </td>
+        <td class="icon-cell" style="width: 200px;">
+            <span id="number">១២៣៤ ​(ចូល)</span>
+            <img src="/img/Line 82 (1).png" class="img-fluid" alt="Line">
+        </td>
+        <td class="text-center" style="width: 200px;">
+            <span>របាយការណ៍ចំណាយថវិការប្រចាំថ្ងៃ</span>
+        </td>
+        <td class="action-cell" style="width: 200px;">
+            <a href="#" class="btn btn-primary" role="button">
+                <span>សកម្មភាព</span>
+            </a>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

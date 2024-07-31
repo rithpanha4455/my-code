@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+   #span{
+
+    color: #2968A3;
+
+    font-family:"Kantumruy Pro", sans-serif ;
+    font-weight: 500;
+    font-size: 22px;
+    padding-left: 10px;
+
+
+
+   }
+     .deleted{
+          width: 276px;
+          height: 48px;
+          background-color: #FFFFFF;
+          border-radius: 8px;
+          margin-bottom: 20px;
+     }
+        #span-1{
+               color:   #F2C631;
+               font-family:"Kantumruy Pro", sans-serif ;
+               font-weight: 500;
+               font-size: 22px;
+               padding-left: 10px;
+               
+        }
+               .p-4{
+                font-family:"Kantumruy Pro", sans-serif ;
+                font-weight: 500;
+                font-size: 22px;
+                color:  #5BBAF1;
+                
+
+               }
+                 #span-1-1{
+
+                    font-family:"Kantumruy Pro", sans-serif ;
+                    font-weight: 500;
+                    font-size: 22px;
+                    color: #1E1E1E;
+                    ;
+
+                 }
+
+                   .form{
+                       width: 146px;
+                       height: 48px;
+                       background-color: #FFFFFF;
+                       border-radius: 8px;
+                       margin-top: 5px;
+                       border: 1px solid #00000073;
+                   }
+
+                     #thep{
+                        font-family:"Kantumruy Pro", sans-serif ;
+                        font-weight: 500;
+                        font-size: 18px;
+                        color: #1E1E1E;
+                        ;
+                         padding-top: 30px;
+
+                            
+                     }
+                        #thep-1{
+                           font-family:"Kantumruy Pro", sans-serif ;
+                           font-weight: 500;
+                           font-size: 16px;
+                           color:  var(--Color-Text-neutral-600, #525252);
+                           
+                        }
+                           .newborder{
+                                 width: 107px;
+                                 height: 30px;
+                                 border-radius: 10px;
+                                 background-color: #FFFFFF;
+                           }
+                           #lr{
+                              padding-left: 20px;
+                           }
+                             #p-th{
+                              font-family:"Kantumruy Pro", sans-serif ;
+                              font-weight: 400;
+                              size: 16px;
+                              color: black;
+                            
+
+                             }
+
+                            #new{
+                                 padding-right: 180px;
+                                    font-family:"Kantumruy Pro", sans-serif ;
+                              font-weight: 400;
+                              size: 16px;
+                              color: black;
+
+
+                             }
+                             #new-1{
+                              padding-right: 300px;
+                                 font-family:"Kantumruy Pro", sans-serif ;
+                           font-weight: 500;
+                           size: 16px;
+                           color: black;
+                             }
+
+                           
+  .table-borderless th, .table-borderless td {
+    border: 0;
+  }
+  .table-primary th {
+    text-align: center;
+    vertical-align: middle;
+  }
+  .img-fluid {
+    max-width: 20px; /* Adjust the max-width as needed */
+    height: auto;
+    margin-left: 5px; /* Add margin for spacing */
+  }
+  th span {
+    margin-left: 10px;
+     /* Space between icon and text */
+     padding-right: 100px;
+  }
+
+           

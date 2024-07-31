@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Sidebar Example</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .nav {
+            height: 72px;
+            background-color: #19274E;
+            /* display: flex;
+            align-items: center; */
+            color: white;
+        }
+
+        .logo img {
+            padding-left: 37px;
+            max-height: 32px; /* Adjust as needed */
+        }
+
+        .nav-1 {
+            height: 72px;
+            background-color: #19274E;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .nav-1 img {
+            padding-right: 20px;
+            max-height: 32px; /* Adjust as needed */
+            cursor: pointer;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 72px; /* Align with navbar height */
+            bottom: 0;
+            left: 0;
+            width: 250px;
+            background-color: #f8f9fa;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+            background-color: #f1f1f1;
+            height: calc(100vh - 72px); /* Full height minus navbar */
+            overflow-y: auto; /* Allow content scrolling if necessary */
+        }
+
+        .sidebar.collapsed {
+            width: 50px;
+        }
+
+        .main-content.collapsed {
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid p-0">
+    <div class="row">
+        <div class="col-12 p-0">
+            <div class="nav d-flex justify-content-between align-items-center">
+                <div class="logo">
+                    <img src="/img/Group (5).png" alt="Logo 1">
+                    <img src="/img/Group (7).png" alt="Logo 2">
+                </div>
+            </div>
+            <div class="nav-1">
+                <img src="/img/ion_menu.png" id="sidebar-toggle" alt="Toggle Sidebar">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="sidebar" id="sidebar">
+                <nav class="dashboard-nav-list">
+                    <a class="nav-link d-flex align-items-center" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                       aria-controls="collapseDocuments" style="padding-left: 10px; font-size: 24px; color: black;" id="main-i-1">
+                        <img src="/img/Document.png" alt="Document Icon" style="max-height: 24px; margin-right: 10px;">
+                        <p style="margin: 0;" id="p-1">ផ្ទាំងគ្របគ្រង</p>
+                    </a>
+                </nav>
+            </div>
+            <div class="main-content" id="main-content">
+                <!-- Main content goes here -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.getElementById('sidebar-toggle').addEventListener('click', function() {
+        var sidebar = document.getElementById('sidebar');
+        var mainContent = document.getElementById('main-content');
+        sidebar.classList.toggle('collapsed');
+        mainContent.classList.toggle('collapsed');
+    });
+</script>
+</body>
+</html>

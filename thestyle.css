@@ -1,0 +1,196 @@
+.sidebar {
+    position: fixed;
+    top: 72px;
+    bottom: 0;
+    left: 0;
+    width: 250px;
+    background-color: #ffffff;
+    padding-top: 20px;
+    overflow-y: hidden;
+    transition: width 0.3s;
+    height: 100vh;
+    
+}
+.sidebar.collapsed {
+    width: 40px; /* Collapsed width */
+}
+/* .main-content {
+    margin-left: 200px;
+    padding: 20px;
+    background-color: whitesmoke;
+    height: 100vh;
+     width: 100%;
+    transition: margin-left 0.3s;
+    overflow: hidden;
+   */
+
+
+
+
+
+   .main-content {
+    margin-top: 70px; /* Aligns with the navbar height */
+    margin-left: 0px; /* Aligns with the sidebar width */
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+    height: 130vh;
+    background-color: whitesmoke;
+    overflow: hidden;
+   }
+      .main-content-new{
+        height: 100vh;
+    background-color: rgb(193, 0, 0);
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    
+
+      }
+.main-content.collapsed {
+    margin-left: 30px; /* Adjusted margin when sidebar is collapsed */
+}
+
+
+
+
+.nav, .nav-1 {
+    height: 72px;
+    background-color: #19274E;
+    color: white;
+}
+.logo img {
+    padding-left: 25px;
+    padding-top: 20px;
+    
+}
+.nav-1 img {
+    cursor: pointer;
+    padding-top: 20px;
+ 
+}
+
+
+#main-i-1{
+ font-family:"Kantumruy Pro", sans-serif ;
+ font-weight: 500;
+ font-size: 24px;
+ color: black;
+    
+
+}
+#main-i{
+    font-family:"Kantumruy Pro", sans-serif ;
+    font-weight: 500;
+    font-size: 24px;
+    color: #2968A3;
+    ;
+
+          
+ }
+
+ #list-drop{
+    padding-left: 40px;
+    font-family:"Kantumruy Pro", sans-serif ;
+    font-weight: 500;
+    font-size: 24px;
+    color: black;
+  
+
+ }
+
+ #list-drop li:hover{
+    background-color: #bdcbe4;
+    border-radius: 5px;
+    color: black;
+}
+    .all-contain{
+           width: 98%;
+           margin: 0 auto;
+           background-color: #ffffff;
+           height: 1071px;
+           border-radius: 18px;
+           padding-top: 10px;
+    }
+       .input{
+            width: 98%;
+            margin: 0 auto;
+            background-color:  #F8F8F8;
+            height: 128px;
+            border-radius: 8px;
+            
+            
+       }
+
+        
+       .custom-select-wrapper {
+        display: inline-block;
+        position: relative;
+        margin: 10px;
+        width: 260px;
+        border: 1px solid black ;
+        border-radius: 5px;;
+
+    }
+
+    .custom-select {
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 10px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .custom-options {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 50%;
+        background-color: #FFFFFF;
+        border: 1px solid white;
+        border-radius: 5px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        z-index: 1000;
+        width: 190px;
+        margin-left: 70px;
+        margin-top: 8px;
+        
+    }
+
+    .custom-options.open {
+        display: block;
+    }
+
+    .custom-option {
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .custom-option:hover {
+        background-color: #f0f0f0;
+    }
+
+    .custom-select .icon {
+        transition: transform 0.3s ease;
+    }
+
+    .custom-select.open .icon {
+        transform: rotate(180deg);
+    }
+      #p-1{
+
+        font-family:"Kantumruy Pro", sans-serif ;
+        font-weight: 500;
+        font-size: 18px;
+        
+        color: #000000A6;
+
+          
+          
+
+      }
+
+    

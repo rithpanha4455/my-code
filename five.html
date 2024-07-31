@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload and Button</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        .the-border {
+            width: 603px;
+            height: 182px;
+            border: 2px dashed rgb(75, 71, 71);
+            display: flex;
+            flex-direction: column; /* Align children in a column */
+            align-items: center;    /* Center items horizontally */
+            justify-content: center; /* Center items vertically */
+            
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .the-border img {
+            max-width: 100px; /* Adjust as needed */
+            margin-bottom: 10px; /* Space between image and text */
+        }
+
+        .the-border p {
+            margin-bottom: 10px; /* Space between text and button */
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .btn-brown {
+            background-color: #6f4f28;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+
+        .btn-brown:hover {
+            background-color: #5a3d1b;
+        }
+
+
+        .custom-select-wrapper {
+            position: relative;
+            margin: 10px 0;
+            width: 100%;
+        }
+
+        .custom-select {
+            border: 1px solid #000000;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+        }
+
+        .custom-options {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: white;
+            z-index: 1000;
+        }
+
+        .custom-options.open {
+            display: block;
+        }
+
+        .custom-option {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .custom-select.open .icon {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+.custom-list-item {
+    display: flex;
+    align-items: center; /* Aligns items vertically centered */
+}
+
+.icon-image {
+    width: 16px; /* Adjust the width as needed */
+    height: 16px; /* Adjust the height as needed */
+    margin-right: 8px; /* Space between the icon and the text */
+}
+
+#p-1 {
+    display: inline-block;
+}
+.custom-thead {
+    background-color:blue;
+    ; /* Custom background color */
+    color: #f60000; /* Text color */
+}
+
+.custom-thead th {
+    font-weight: bold;
+    text-align: center; /* Optional: Center text */
+}
+
+.custom-table tbody tr:hover {
+    background-color: #f5f5f5; /* Optional: Row hover effect */
+}
+
+
+    </style>
+</head>
+<body style="background-color: whitesmoke;">
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="the-border">
+                <img src="/img/Group 39444 (1).png" alt="File Icon">
+                <p>Drag & Drop file here</p>
+                <a href="file:///C:/path-to-your-file.ext" class="btn btn-brown">Open Local File</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="custom-select-wrapper" style="width: 316px; height: 52px;">
+    <div class="custom-select d-flex align-items-center justify-content-between" data-select="2">
+        <div class="d-flex align-items-center">
+            
+<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" style="width: 24px;height: 24px;color: black;" >
+
+            <span id="ps">ជ្រើសរើស អ្នកចុះហត្ថលេខា</span>
+            <input class="form-check-input ms-2" type="checkbox" value="" id="flexCheckChecked" checked>
+        </div>
+        <img src="/img/mdi_menu-down.png" alt="Dropdown Icon" class="icon" style="width: 16px; height: 16px;">
+    </div>
+    <div class="custom-options">
+        <div class="custom-option" data-value="1">Option 1</div>
+        <div class="custom-option" data-value="2">Option 2</div>
+        <div class="custom-option" data-value="3">Option 3</div>
+    </div>
+</div>
+
+
+
+<li class="custom-list-item">
+    <img src="/img/your-icon.png" alt="Icon" class="icon-image">
+
+    <span id="p-1">ក្រុមមើលឯកសារ</span>
+</li>
+
+<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" style="width: 24px;height: 24px;color: black;" >
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your custom CSS file -->
+    <title>Custom Styled Table</title>
+</head>
+<body>
+
+<div class="container mt-4">
+    <table class="table table-striped custom-table">
+        <thead class="custom-thead">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+                <th scope="col">HH</th>
+                <th scope="col">HH</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>Example</td>
+                <td>Example</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                <td>Example</td>
+                <td>Example</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>Bird</td>
+                <td>@twitter</td>
+                <td>Example</td>
+                <td>Example</td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td>Larry</td>
+                <td>Bird</td>
+                <td>@twitter</td>
+                <td>Example</td>
+                <td>Example</td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td>Larry</td>
+                <td>Bird</td>
+                <td>@twitter</td>
+                <td>Example</td>
+                <td>Example</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const customSelects = document.querySelectorAll('.custom-select');
+    const customOptionsLists = document.querySelectorAll('.custom-options');
+
+    // Function to close all custom options
+    const closeAllCustomOptions = () => {
+        customOptionsLists.forEach(options => options.classList.remove('open'));
+        customSelects.forEach(select => select.classList.remove('open')); // Remove open class to reset icon rotation
+    };
+
+    customSelects.forEach(select => {
+        select.addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevent event from bubbling up
+
+            // Toggle the current dropdown
+            const options = select.nextElementSibling;
+            options.classList.toggle('open');
+            select.classList.toggle('open'); // Toggle icon rotation
+
+            // Close other dropdowns
+            customSelects.forEach(otherSelect => {
+                if (otherSelect !== select) {
+                    otherSelect.classList.remove('open');
+                    otherSelect.nextElementSibling.classList.remove('open');
+                }
+            });
+        });
+    });
+
+    document.querySelectorAll('.custom-option').forEach(option => {
+        option.addEventListener('click', (e) => {
+            const selectWrapper = e.target.closest('.custom-select-wrapper');
+            const selectText = selectWrapper.querySelector('.custom-select span');
+            selectText.textContent = e.target.textContent;
+
+            closeAllCustomOptions();
+        });
+    });
+
+    // Close dropdowns if clicking outside
+    document.addEventListener('click', closeAllCustomOptions);
+});
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Sidebar with Toggle</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="thestyle.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Khmer&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+   
+    
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row fixed-top">
+        <div class="col-md-2 p-0">
+            <div class="nav  justify-content-between align-items-centerd-flex">
+                <div class="logo">
+                    <img src="/img/Group (5).png" alt="Logo 1" id="img-1">
+                    <img src="/img/Group (7).png" alt="Logo 2" id="img-2">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-10 p-0">
+            <div class="nav-1">
+                <img src="/img/ion_menu.png" id="sidebar-toggle" alt="Toggle Sidebar" class="me-3">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid p-0">
+    <div class="row">
+
+        <div class="col-md-2 p-0 " >
+
+             
+           <div class="sidebar" id="sidebar">
+                <nav class="dashboard-nav-list" style="padding-top: 70px;">
+
+                    <a class="nav-link d-flex align-items-center" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                       aria-controls="collapseDocuments" style="padding-left: 10px; font-size: 24px; color: black;" id="main-i-1">
+                        <img src="/img/Document.png" alt="Document Icon" style="max-height: 24px; margin-right: 10px;">
+                        <p style="margin: 0; " id="p-1">ផ្ទាំងគ្របគ្រង</p>
+                    </a>
+
+                    <a class="nav-link d-flex align-items-center" data-bs-toggle="collapse" href="#collapseDocuments"  role="button" aria-expanded="false"
+                    aria-controls="collapseDocuments" style="padding-left: 10px; font-size: 24px; " id="main-i">
+                     <img src="/img/Document (1).png" alt="Document Icon" style="max-height: 24px; margin-right: 10px;">
+                     ឯកសារ <img src="/img/ph_caret-down-bold.png" style="padding-left: 30px;">
+                 </a>
+
+                 <div class="collapse" id="collapseDocuments">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small" id="list-drop">
+        
+                        <li><a href="#" class="nav-link" id="a-list" style="color: black;">បន្ថែមឯកសា</a></li>
+                        <li><a href="#" class="nav-link" id="a-list">បញ្ជូនឯកសារ</a></li>
+                        <li><a href="#" class="nav-link" id="a-list">បណ្ណាល័យ</a></li>
+                    </ul>
+                </div>
+                <a class="nav-link d-flex align-items-center" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                aria-controls="collapseDocuments" style="padding-left: 10px; font-size: 24px; color: black;" id="main-i-1">
+                 <img src="/img/Document.png" alt="Document Icon" style="max-height: 24px; margin-right: 10px;">
+                 <p style="margin: 0; " id="p-1">ក្រុមមើលឯកសារ</p>
+             </a>
+
+             <a class="nav-link d-flex align-items-center" data-bs-toggle="collapse" role="button" aria-expanded="false"
+             aria-controls="collapseDocuments" style="padding-left: 10px; font-size: 24px; color: black;" id="main-i-1">
+              <img src="/img/Document.png" alt="Document Icon" style="max-height: 24px; margin-right: 10px;">
+              <p style="margin: 0; " id="p-1">ប្រអប់សារ</p>
+          </a>
+
+             
+          <a class="nav-link d-flex align-items-center" data-bs-toggle="collapse" role="button" aria-expanded="false"
+          aria-controls="collapseDocuments" style="padding-left: 10px; font-size: 24px; color: black;" id="main-i-1">
+           <img src="/img/Document (2).png" alt="Document Icon" style="max-height: 24px; margin-right: 10px;">
+           <p style="margin: 0; " id="p-1">រាយការណ៍បញ្ហា</p>
+       </a>
+
+       <a class="nav-link d-flex align-items-center" data-bs-toggle="collapse" role="button" aria-expanded="false"
+       aria-controls="collapseDocuments" style="padding-left: 10px; font-size: 24px; color: black;" id="main-i-1">
+        <img src="/img/Document (2).png" alt="Document Icon" style="max-height: 24px; margin-right: 10px;">
+        <p style="margin: 0; " id="p-1">សុវត្ថិភាព</p>
+    </a>
+
+
+    
+
+                   
+
+
+                </nav>
+                <div class="footer" style="position: fixed; bottom: 0; left: 0; width: 13%; color: black; text-align: center; font-size: 15px;">
+                    <p id="new-p">© 2024 All Right Reserved by GDTM</p>
+                </div>
+                </div>
+                
+           
+                
+
+                     
+               
+            
+                
+                                      </div>
+                                      <div class="col-md-10"></div>
+                                        <div class="main-content-new">
+
+                                        </div>
+
+                                     
+                                
+                                   
+                            </div>
+
+
+
+
+
+            
+                         </div>
+                
+
+                 
+                    </div>
+
+                
+           
+        </div>
+    </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.getElementById('sidebar-toggle').addEventListener('click', function() {
+        var sidebar = document.getElementById('sidebar');
+        var mainContent = document.getElementById('main-content');
+        var imgt =  document.querySelector('#img-2');
+         var thep = document.querySelector('#new-p');
+        imgt.classList.toggle('d-none');
+        thep.classList.toggle('d-none');
+        
+        sidebar.classList.toggle('collapsed');
+        mainContent.classList.toggle('collapsed');
+    });
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const customSelects = document.querySelectorAll('.custom-select');
+        const customOptionsLists = document.querySelectorAll('.custom-options');
+
+        customSelects.forEach(select => {
+            select.addEventListener('click', () => {
+                closeAllCustomOptions();
+                const options = select.nextElementSibling;
+                options.classList.toggle('open');
+                select.classList.toggle('open'); // Toggle icon rotation
+            });
+        });
+
+        document.querySelectorAll('.custom-option').forEach(option => {
+            option.addEventListener('click', (e) => {
+                const selectWrapper = e.target.closest('.custom-select-wrapper');
+                const selectText = selectWrapper.querySelector('.custom-select span');
+                selectText.textContent = e.target.textContent;
+                closeAllCustomOptions();
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.custom-select-wrapper')) {
+                closeAllCustomOptions();
+            }
+        });
+
+        function closeAllCustomOptions() {
+            customOptionsLists.forEach(options => {
+                options.classList.remove('open');
+            });
+            customSelects.forEach(select => {
+                select.classList.remove('open'); // Reset icon rotation
+            });
+        }
+    });
+</script>
+</body>
+</html>
